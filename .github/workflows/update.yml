@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Debug probe
+        run: python debug_probe.py
+
       - name: Fetch statements
         id: fetch
         run: python scraper.py
