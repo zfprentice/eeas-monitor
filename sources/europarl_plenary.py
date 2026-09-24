@@ -157,24 +157,32 @@ def fetch(years=None):
     all_identifiers = []
     for year in years:
         all_identifiers.extend(_list_identifiers_for_year(year))
+    print(f"[europarl-plenary] listed {len(all_identifiers)} document(s) across year(s) {years}")
 
     all_identifiers.sort(key=_doc_number, reverse=True)
     candidates = all_identifiers[:_MAX_DETAIL_FETCHES]
 
     items = []
+    detail_failures = 0
     for identifier in candidates:
         try:
             r = requests.get(f"{_API_BASE}/plenary-documents/{identifier}", headers=_HEADERS, timeout=20)
             if r.status_code != 200:
+                detail_failures += 1
                 continue
             detail = r.json().get("data", [])
             if not detail:
+                detail_failures += 1
                 continue
             item = parse_detail(detail[0])
             if item:
                 items.append(item)
         except Exception as e:
+            detail_failures += 1
             print(f"[europarl-plenary] error fetching detail {identifier}: {e}")
         time.sleep(0.3)
+
+    if detail_failures:
+        print(f"[europarl-plenary] {detail_failures}/{len(candidates)} detail fetch(es) failed or were empty")
 
     return items
