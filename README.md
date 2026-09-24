@@ -100,6 +100,16 @@ this workflow's `env:` block. Never hardcode a credential.
   numerically-newest ones. If EP's output volume grows enough that AFET/DEVE documents
   fall outside that window between hourly runs, some could be missed — worth revisiting
   if that cap ever needs raising.
+- **The EP Open Data API is noticeably flaky**, observed live across several runs while
+  building this: the same `/plenary-documents` list query timed out repeatedly at a
+  100-item page size (fine at 25), and separately returned a clean HTTP 200 with an
+  empty result on its very first page when every other call for the same query that day
+  returned 100+ results. Neither looked like rate-limiting. `europarl_plenary` retries
+  both cases (timeouts, and a suspiciously-empty first page) before giving up, which
+  means a run touching this source can occasionally take 1-2+ minutes rather than the
+  few seconds the other two sources take — still fine for an hourly cron, and a bad run
+  degrades gracefully (other sources' data is unaffected, this one just tries again next
+  hour), but worth knowing if the workflow's total runtime ever becomes a concern.
 
 ## Local development
 
