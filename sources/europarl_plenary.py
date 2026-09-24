@@ -38,8 +38,13 @@ COMMITTEES_OF_INTEREST = {"AFET", "DEVE"}
 # detail fetch each run. Bounds request volume regardless of how many plenary
 # documents exist for the year; wide enough that AFET/DEVE items reliably fall
 # within the window given normal EP output volume.
+# Live testing showed /plenary-documents?year=...&limit=100 repeatedly timing
+# out at 30s even with a retry (confirmed twice), while smaller pages and the
+# single-document detail endpoint responded quickly -- this API's response
+# time appears to scale badly with page size. Trading more, lighter requests
+# for fewer heavy ones.
 _MAX_DETAIL_FETCHES = 60
-_LIST_PAGE_SIZE = 100
+_LIST_PAGE_SIZE = 25
 
 _DOC_TYPE_LABELS = {
     "REPORT_PLENARY": "Report",
@@ -143,7 +148,8 @@ def _list_identifiers_for_year(year):
             r = _get_with_retry(
                 f"{_API_BASE}/plenary-documents",
                 params={"year": year, "limit": _LIST_PAGE_SIZE, "offset": offset},
-                timeout=30,
+                timeout=20,
+                retries=2,
             )
             if r.status_code != 200:
                 print(f"[europarl-plenary] list year={year} offset={offset}: HTTP {r.status_code}")
