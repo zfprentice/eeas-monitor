@@ -79,10 +79,13 @@ def fetch_presscorner(pages=5):
         }
         try:
             r = requests.get(base_url, params=params, headers=headers, timeout=15)
+            print(f"[DEBUG presscorner] page={page} status={r.status_code} url={r.url}")
+            print(f"[DEBUG presscorner] body[:1000]={r.text[:1000]!r}")
             if r.status_code != 200:
                 break
             data = r.json()
             docs = data.get("documents", []) if isinstance(data, dict) else data
+            print(f"[DEBUG presscorner] parsed type={type(data)} doc_count={len(docs) if docs else 0}")
             if not docs:
                 break
 
@@ -130,10 +133,13 @@ def fetch_eeas_portal(pages=3):
         url = f"{base_url}/eeas/mat%C3%A9riel-de-presse_fr?f[0]=pm_type:Statement&page={page}"
         try:
             r = requests.get(url, headers=headers, timeout=15)
+            print(f"[DEBUG eeas] page={page} status={r.status_code} url={r.url} len={len(r.text)}")
+            print(f"[DEBUG eeas] body[:1500]={r.text[:1500]!r}")
             if r.status_code != 200:
                 break
             soup = BeautifulSoup(r.text, "html.parser")
             cards = soup.select("article, .ecl-card, .views-row")
+            print(f"[DEBUG eeas] card_count={len(cards)}")
             if not cards:
                 break
 
