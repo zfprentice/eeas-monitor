@@ -143,6 +143,7 @@ def parse_detail(doc):
 def _list_identifiers_for_year(year):
     identifiers = []
     offset = 0
+    empty_first_page_retries = 2  # see note below
     while True:
         try:
             r = _get_with_retry(
@@ -160,6 +161,17 @@ def _list_identifiers_for_year(year):
             break
 
         if not stubs:
+            # A 200 with an empty page is the normal end-of-results signal --
+            # *except* on the very first page, where it's been observed live
+            # to be a spurious/inconsistent response (same query returned
+            # 100+ results moments earlier and moments later with no error).
+            # Retry a first-page emptiness a couple of times before accepting
+            # it as a genuinely empty year.
+            if offset == 0 and empty_first_page_retries > 0:
+                empty_first_page_retries -= 1
+                print(f"[europarl-plenary] year={year} offset=0 returned empty; retrying ({empty_first_page_retries} left)")
+                time.sleep(2)
+                continue
             break
         identifiers.extend(s["identifier"] for s in stubs if s.get("identifier"))
         if len(stubs) < _LIST_PAGE_SIZE:
