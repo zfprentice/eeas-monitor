@@ -1,0 +1,59 @@
+{
+  "totalNumber": 130937,
+  "pageSize": 3,
+  "pageNumber": 0,
+  "docuLanguageListResources": [
+    {
+      "ky": 703699,
+      "languageCode": "EN",
+      "docuky": 212805,
+      "eventDate": "2026-09-24",
+      "title": "Opening remarks by Commissioner Hansen at the “EU AgRI 2040” Agricultural Research and Innovation Conference",
+      "leadText": null,
+      "docutype": {"ky": 4, "code": "SPEECH", "description": "Speech", "order": 3},
+      "mainPicture": null,
+      "refCode": "SPEECH/26/1968",
+      "estimatedTimeReading": 4,
+      "isETranslated": false
+    },
+    {
+      "ky": 703650,
+      "languageCode": "EN",
+      "docuky": 212790,
+      "eventDate": "2026-09-23",
+      "title": "Speech by President von der Leyen at the High-Level meeting on Climate Action and Just Transition",
+      "leadText": null,
+      "docutype": {"ky": 3, "code": "SPEECH", "description": "Speech", "order": 3},
+      "mainPicture": null,
+      "refCode": "SPEECH/26/1955",
+      "estimatedTimeReading": 5,
+      "isETranslated": false
+    },
+    {
+      "ky": 703600,
+      "languageCode": "EN",
+      "docuky": 212700,
+      "eventDate": "2026-09-23",
+      "title": "EU and Canada secure at least €211 million in pledges for Global Ocean Observation",
+      "leadText": "Today, President of the European Commission Ursula von der Leyen and Prime Minister of Canada Mark Carney launched the OceanEye International Alliance for the Global Ocean Observing System at a high‑level pledging event in New York.",
+      "docutype": {"ky": 1, "code": "IP", "description": "Press release", "order": 1},
+      "mainPicture": null,
+      "refCode": "IP/26/1954",
+      "estimatedTimeReading": 3,
+      "isETranslated": false
+    },
+    {
+      "ky": 703500,
+      "languageCode": "EN",
+      "docuky": 212600,
+      "eventDate": "2026-09-23",
+      "title": "Daily News 23 / 09 / 2026",
+      "leadText": null,
+      "docutype": {"ky": 5, "code": "MEX", "description": "Daily news", "order": 5},
+      "mainPicture": null,
+      "refCode": "MEX/26/1951",
+      "estimatedTimeReading": 1,
+      "isETranslated": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "id": "eli/dl/doc/A-10-2026-0042",
+      "type": "Work",
+      "adopts": ["eli/dl/doc/DEVE-PR-771200"],
+      "parliamentary_term": "org/ep-10",
+      "document_date": "2026-09-18",
+      "work_type": "def/ep-document-types/RECOMMENDATION",
+      "is_realized_by": [
+        {
+          "id": "eli/dl/doc/A-10-2026-0042/en",
+          "type": "Expression",
+          "language": "http://publications.europa.eu/resource/authority/language/ENG",
+          "title": {
+            "en": "Recommendation on EU humanitarian aid to the Sahel region"
+          },
+          "title_alternative": {
+            "en": "RECOMMENDATION - on EU humanitarian aid to the Sahel region - (2025/2201(INI)) - Committee on Development - Rapporteur: Barry Andrews"
+          }
+        }
+      ]
+    }
+  ]
+}
