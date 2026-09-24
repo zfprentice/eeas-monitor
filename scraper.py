@@ -64,8 +64,8 @@ def detect_regions(text):
     return matched if matched else ["Global / Multilateral"]
 
 
-def fetch_presscorner_history(pages=5):
-    """Pulls multiple pages of past statements from the Press Corner API."""
+def fetch_presscorner(pages=5):
+    """Pulls recent and historical statements from the EC Press Corner API."""
     items = []
     base_url = "https://ec.europa.eu/commission/presscorner/api/documents"
     headers = {"User-Agent": "EEAS-Monitor-Pipeline/1.0"}
@@ -73,19 +73,16 @@ def fetch_presscorner_history(pages=5):
     for page in range(pages):
         params = {
             "docType": "STATEMENT,SPEECH",
-            "pagesize": 100,
+            "pagesize": 50,
             "pageNumber": page,
             "language": "en",
         }
         try:
-            r = requests.get(
-                base_url, params=params, headers=headers, timeout=15
-            )
+            r = requests.get(base_url, params=params, headers=headers, timeout=15)
             if r.status_code != 200:
                 break
-            docs = r.json()
-            if isinstance(docs, dict):
-                docs = docs.get("documents", [])
+            data = r.json()
+            docs = data.get("documents", []) if isinstance(data, dict) else data
             if not docs:
                 break
 
@@ -104,7 +101,10 @@ def fetch_presscorner_history(pages=5):
                         "id": ref,
                         "title": title,
                         "link": f"https://ec.europa.eu/commission/presscorner/detail/en/{ref}",
-                        "date": doc.get("publicationDate", "")[:10],
+                        "date": doc.get(
+                            "publicationDate",
+                            datetime.datetime.utcnow().strftime("%Y-%m-%d"),
+                        )[:10],
                         "type": doc.get("documentType", "STATEMENT"),
                         "speaker": author,
                         "source": "Commission PressCorner (HQ)",
@@ -113,17 +113,17 @@ def fetch_presscorner_history(pages=5):
                     }
                 )
         except Exception as e:
-            print(f"Error reading PressCorner page {page}: {e}")
+            print(f"Error querying PressCorner page {page}: {e}")
             break
     return items
 
 
-def fetch_eeas_portal_history(pages=5):
-    """Paginates through past pages of the EEAS portal."""
+def fetch_eeas_portal(pages=3):
+    """Paginates through statements on the EEAS French press portal."""
     items = []
     base_url = "https://www.eeas.europa.eu"
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
 
     for page in range(pages):
@@ -145,48 +145,6 @@ def fetch_eeas_portal_history(pages=5):
                 title = a_tag.get_text(strip=True)
                 link = urljoin(base_url, a_tag["href"])
                 doc_id = hashlib.md5(link.encode("utf-8")).hexdigest()[:12]
-                date_tag = c.select_one("time, .ecl-card__detail")
-                date_str = date_tag.get_text(strip=True) if date_tag else ""
-
-                items.append(
-                    {
-                        "id": doc_id,
-                        "title": title,
-                        "link": link,
-                        "date": date_str[:15],
-                        "type": "Statement / Communiqué",
-                        "speaker": "EEAS / EU Delegation",
-                        "source": "EEAS Direct Portal",
-                        "regions": detect_regions(f"{title} {c.get_text()}"),
-                        "summary": title,
-                    }
-                )
-        except Exception as e:
-            print(f"Error scraping EEAS page {page}: {e}")
-            break
-    return items
-
-
-def fetch_eeas_portal():
-    items = []
-    url = "https://www.eeas.europa.eu/eeas/mat%C3%A9riel-de-presse_fr?f[0]=pm_type:Statement"
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
-
-    try:
-        r = requests.get(url, headers=headers, timeout=15)
-        if r.status_code == 200:
-            soup = BeautifulSoup(r.text, "html.parser")
-            cards = soup.select("article, .ecl-card, .views-row")
-            for c in cards:
-                a_tag = c.select_one("h2 a, h3 a, .ecl-card__title a")
-                if not a_tag or not a_tag.get("href"):
-                    continue
-
-                title = a_tag.get_text(strip=True)
-                link = urljoin("https://www.eeas.europa.eu", a_tag["href"])
-                doc_id = hashlib.md5(link.encode("utf-8")).hexdigest()[:12]
 
                 date_tag = c.select_one("time, .ecl-card__detail")
                 date_str = (
@@ -196,8 +154,6 @@ def fetch_eeas_portal():
                 )
 
                 corpus = f"{title} {c.get_text()}"
-                regions = detect_regions(corpus)
-
                 items.append(
                     {
                         "id": doc_id,
@@ -207,12 +163,13 @@ def fetch_eeas_portal():
                         "type": "Statement / Communiqué",
                         "speaker": "EEAS / EU Delegation",
                         "source": "EEAS Direct Portal",
-                        "regions": regions,
+                        "regions": detect_regions(corpus),
                         "summary": title,
                     }
                 )
-    except Exception as e:
-        print(f"Error querying EEAS Portal: {e}")
+        except Exception as e:
+            print(f"Error querying EEAS Portal page {page}: {e}")
+            break
     return items
 
 
@@ -227,19 +184,20 @@ def main():
             existing = []
 
     seen_ids = {x["id"] for x in existing if "id" in x}
-    new_items = fetch_presscorner() + fetch_eeas_portal()
+    new_items = fetch_presscorner(pages=5) + fetch_eeas_portal(pages=3)
 
     for item in new_items:
         if item["id"] not in seen_ids and item["title"]:
             existing.append(item)
             seen_ids.add(item["id"])
 
+    # Sort newest to oldest by date
     existing.sort(key=lambda x: str(x.get("date", "")), reverse=True)
-    existing = existing[:2000]
+    existing = existing[:1000]  # Store up to 1,000 historical statements
 
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(existing, f, indent=2, ensure_ascii=False)
-    print(f"Saved {len(existing)} statements.")
+    print(f"Successfully saved {len(existing)} statements to {DATA_PATH}.")
 
 
 if __name__ == "__main__":
