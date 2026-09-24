@@ -50,6 +50,21 @@ _DOC_TYPE_LABELS = {
 _RAPPORTEUR_RE = re.compile(r"Rapporteur:\s*(.+)$")
 
 
+def _get_with_retry(url, params=None, timeout=20, retries=1):
+    """The API is occasionally slow enough to exceed a 20s timeout, confirmed
+    live (a request that timed out succeeded immediately on a plain retry
+    seconds later), so a single retry meaningfully improves reliability."""
+    last_exc = None
+    for attempt in range(retries + 1):
+        try:
+            return requests.get(url, params=params, headers=_HEADERS, timeout=timeout)
+        except requests.exceptions.RequestException as e:
+            last_exc = e
+            if attempt < retries:
+                time.sleep(1)
+    raise last_exc
+
+
 def _committee_from_adopts(adopts):
     for ref in adopts or []:
         tail = ref.rsplit("/", 1)[-1]  # e.g. "AFET-PR-770055"
@@ -125,11 +140,10 @@ def _list_identifiers_for_year(year):
     offset = 0
     while True:
         try:
-            r = requests.get(
+            r = _get_with_retry(
                 f"{_API_BASE}/plenary-documents",
                 params={"year": year, "limit": _LIST_PAGE_SIZE, "offset": offset},
-                headers=_HEADERS,
-                timeout=20,
+                timeout=30,
             )
             if r.status_code != 200:
                 print(f"[europarl-plenary] list year={year} offset={offset}: HTTP {r.status_code}")
@@ -166,7 +180,7 @@ def fetch(years=None):
     detail_failures = 0
     for identifier in candidates:
         try:
-            r = requests.get(f"{_API_BASE}/plenary-documents/{identifier}", headers=_HEADERS, timeout=20)
+            r = _get_with_retry(f"{_API_BASE}/plenary-documents/{identifier}", timeout=20)
             if r.status_code != 200:
                 detail_failures += 1
                 continue
