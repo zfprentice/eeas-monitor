@@ -1,0 +1,25 @@
+{
+  "data": [
+    {
+      "id": "eli/dl/doc/A-10-2026-0002",
+      "type": "Work",
+      "adopts": ["eli/dl/doc/ECON-PR-778306"],
+      "parliamentary_term": "org/ep-10",
+      "document_date": "2026-09-05",
+      "work_type": "def/ep-document-types/REPORT_PLENARY",
+      "is_realized_by": [
+        {
+          "id": "eli/dl/doc/A-10-2026-0002/en",
+          "type": "Expression",
+          "language": "http://publications.europa.eu/resource/authority/language/ENG",
+          "title": {
+            "en": "European Central Bank annual report 2025"
+          },
+          "title_alternative": {
+            "en": "REPORT - on the European Central Bank - annual report 2025 - (2025/2182(INI)) -  - Johan Van Overtveldt"
+          }
+        }
+      ]
+    }
+  ]
+}

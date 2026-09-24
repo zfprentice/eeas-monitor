@@ -11,8 +11,9 @@ monitoring tool — see [Roadmap](#roadmap) for what's planned next (MEPs, Twitt
 ```
 GitHub Actions (hourly cron)
   -> scraper.py
-       -> sources/presscorner.py   (European Commission press releases/speeches/statements)
-       -> sources/eeas_portal.py   (EEAS press material portal)
+       -> sources/presscorner.py       (European Commission press releases/speeches/statements)
+       -> sources/eeas_portal.py       (EEAS press material portal)
+       -> sources/europarl_plenary.py  (EP plenary reports/recommendations, AFET + DEVE only)
   -> data/statements.json (deduped, sorted newest-first, capped at 1000)
   -> index.html reads that JSON client-side and renders the feed
 ```
@@ -52,7 +53,10 @@ this workflow's `env:` block. Never hardcode a credential.
 
 ## Roadmap
 
-- **MEPs / European Parliament statements** — planned as `sources/europarl.py`.
+- **European Parliament plenary reports (AFET/DEVE)** — done, see `sources/europarl_plenary.py`.
+  MEPs-as-a-source (individual speeches/questions) beyond this is still open — see
+  "Known limitations" below for why parliamentary questions specifically were passed
+  over for now.
 - **Twitter/X feeds** (e.g. official EU institution accounts) — planned as
   `sources/twitter_x.py`, will need an API credential (see above).
 - **European Council / Council of the EU statements** (`consilium.europa.eu`) —
@@ -76,6 +80,26 @@ this workflow's `env:` block. Never hardcode a credential.
   from the response), but worth knowing if you're relying on it to *exclude* types.
 - Region detection (`regions.py`) is keyword/word-boundary matching, not NLP — good
   enough for a first pass, but it can miss or misattribute edge cases.
+- **`europarl_plenary`'s document link is an unverified best-guess.** It follows EP's
+  well-known `doceo/document/{id}_EN.html` convention, but `www.europarl.europa.eu`
+  returns HTTP 202 with an empty body to plain (non-browser) requests — for both
+  plausible and deliberately-wrong paths alike — so a live fetch can't actually confirm
+  the pattern is correct. Spot-check a few generated links after this source has run.
+- **`europarl_plenary` only covers formal plenary reports/recommendations**, not MEPs'
+  individual speeches or written questions. The EP Open Data API's
+  `/parliamentary-questions` endpoint was investigated and rejected for now: its
+  `date-from`/`date-to` params are silently ignored (same class of bug as the
+  pagination issue above), there's no committee filter either, and the volume is very
+  high (thousands/year, mostly unrelated to foreign affairs) — it would need real
+  filtering work to be useful rather than noise. Verbatim plenary debate speeches were
+  not investigated at all yet and remain the most promising untried EP source.
+- **`europarl_plenary` has no committee-level API filter**, so it can't cheaply ask
+  "give me only AFET/DEVE documents." It works around this by listing all document
+  stubs for the year (cheap) and only running the expensive per-document detail fetch
+  (which is what reveals the committee) against the `_MAX_DETAIL_FETCHES` (60)
+  numerically-newest ones. If EP's output volume grows enough that AFET/DEVE documents
+  fall outside that window between hourly runs, some could be missed — worth revisiting
+  if that cap ever needs raising.
 
 ## Local development
 

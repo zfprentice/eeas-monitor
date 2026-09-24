@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "id": "eli/dl/doc/A-10-2026-0003",
+      "type": "Work",
+      "adopts": ["eli/dl/doc/AFET-PR-770055"],
+      "parliamentary_term": "org/ep-10",
+      "document_date": "2026-09-10",
+      "work_type": "def/ep-document-types/REPORT_PLENARY",
+      "is_realized_by": [
+        {
+          "id": "eli/dl/doc/A-10-2026-0003/en",
+          "type": "Expression",
+          "language": "http://publications.europa.eu/resource/authority/language/ENG",
+          "title": {
+            "en": "Interim report on the EU-Principality association agreement"
+          },
+          "title_alternative": {
+            "en": "INTERIM REPORT - on the proposal for a Council decision on the conclusion, on behalf of the European Union, of the Agreement establishing an association between the European Union and the Principality - (2025/0102(NLE)) - Committee on Foreign Affairs - Rapporteur: Anna Fotyga"
+          }
+        },
+        {
+          "id": "eli/dl/doc/A-10-2026-0003/fr",
+          "type": "Expression",
+          "language": "http://publications.europa.eu/resource/authority/language/FRA",
+          "title": {
+            "fr": "Rapport interimaire sur l'accord d'association UE-Principaute"
+          },
+          "title_alternative": {
+            "fr": "RAPPORT INTERIMAIRE - sur la proposition de decision du Conseil relative a la conclusion, au nom de l'Union europeenne, de l'accord d'association - Commission des affaires etrangeres - Rapporteure: Anna Fotyga"
+          }
+        }
+      ]
+    }
+  ]
+}

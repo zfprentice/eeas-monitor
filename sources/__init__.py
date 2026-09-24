@@ -22,6 +22,6 @@ That's it — scraper.py's main() loop, dedup, and data/statements.json writing 
 generic across all registered sources.
 """
 
-from sources import eeas_portal, presscorner
+from sources import eeas_portal, europarl_plenary, presscorner
 
-SOURCES = [presscorner, eeas_portal]
+SOURCES = [presscorner, eeas_portal, europarl_plenary]
