@@ -78,6 +78,19 @@
     "summary": "In the context of the United Nations General Assembly High-Level Week, the European Commission has announced three new Global Gateway investments that put the EU Global Health Resilience Initiative into action in partner countries."
   },
   {
+    "id": "SPEECH/26/1975",
+    "title": "Speech by Commissioner Lahbib on Haiti during the UN General Assembly",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1975",
+    "date": "2026-09-24",
+    "type": "Speech",
+    "speaker": "Commissioner Lahbib",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Americas"
+    ],
+    "summary": ""
+  },
+  {
     "id": "STATEMENT/26/1961",
     "title": "Statement by Commissioner Lahbib on behalf of EU Member States on the 75th Anniversary of the 1951 Convention on the Status of Refugees",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1961",
@@ -1207,6 +1220,136 @@
       "Global / Multilateral"
     ],
     "summary": "Foreign Affairs Council: Remarks by High Representative Kaja Kallas at the press conference"
+  },
+  {
+    "id": "A-10-2026-0172",
+    "title": "REPORT on the 2025 Commission report on Ukraine",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0172_EN.html",
+    "date": "2026-06-12",
+    "type": "Report",
+    "speaker": "Michael Gahler",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Eastern Europe & Caucasus"
+    ],
+    "summary": "REPORT - on the 2025 Commission report on Ukraine - (2025/2259(INI)) - Committee on Foreign Affairs - Rapporteur: Michael Gahler"
+  },
+  {
+    "id": "A-10-2026-0166",
+    "title": "REPORT on the 2025 Commission report on Kosovo",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0166_EN.html",
+    "date": "2026-06-10",
+    "type": "Report",
+    "speaker": "Riho Terras",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Western Balkans"
+    ],
+    "summary": "REPORT - on the 2025 Commission report on Kosovo - (2025/2252(INI)) - Committee on Foreign Affairs - Rapporteur: Riho Terras"
+  },
+  {
+    "id": "A-10-2026-0164",
+    "title": "REPORT on the 2025 Commission report on Moldova",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0164_EN.html",
+    "date": "2026-06-10",
+    "type": "Report",
+    "speaker": "European Parliament (AFET)",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Eastern Europe & Caucasus"
+    ],
+    "summary": "REPORT - on the 2025 Commission report on Moldova - (2025/2258(INI)) -  - Sven Mikser"
+  },
+  {
+    "id": "A-10-2026-0163",
+    "title": "REPORT on the 2025 Commission report on Serbia",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0163_EN.html",
+    "date": "2026-06-10",
+    "type": "Report",
+    "speaker": "Tonino Picula",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Western Balkans"
+    ],
+    "summary": "REPORT - on the 2025 Commission report on Serbia - (2025/2255(INI)) - Committee on Foreign Affairs - Rapporteur: Tonino Picula"
+  },
+  {
+    "id": "A-10-2026-0162",
+    "title": "REPORT on the 2025 Commission report on North Macedonia",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0162_EN.html",
+    "date": "2026-06-09",
+    "type": "Report",
+    "speaker": "Thomas Waitz",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Western Balkans"
+    ],
+    "summary": "REPORT - on the 2025 Commission report on North Macedonia - (2025/2254(INI)) - Committee on Foreign Affairs - Rapporteur: Thomas Waitz"
+  },
+  {
+    "id": "A-10-2026-0150",
+    "title": "REPORT on a European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy on promoting transnational governance on water in the interests of conflict prevention and peace",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0150_EN.html",
+    "date": "2026-06-05",
+    "type": "Report",
+    "speaker": "Leoluca Orlando",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "REPORT - on a European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy on promoting transnational governance on wat"
+  },
+  {
+    "id": "A-10-2026-0147",
+    "title": "REPORT on reinforcing development cooperation to address irregular population movements and their root causes in partner countries",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0147_EN.html",
+    "date": "2026-05-18",
+    "type": "Report",
+    "speaker": "European Parliament (DEVE)",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "REPORT - on reinforcing development cooperation to address irregular population movements and their root causes in partner countries - (2025/2111(INI)) -  - Lukas Mandl"
+  },
+  {
+    "id": "A-10-2026-0142",
+    "title": "REPORT on countering transnational repression – towards an EU strategy to protect Europe’s sovereignty and democratic values",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0142_EN.html",
+    "date": "2026-05-12",
+    "type": "Report",
+    "speaker": "Hannah Neumann",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "REPORT - on countering transnational repression - towards an EU strategy to protect Europe’s sovereignty and democratic values - (2025/2179(INI)) - Committee on Foreign Affairs - Rapporteur: Hannah Neumann"
+  },
+  {
+    "id": "A-10-2026-0141",
+    "title": "REPORT on the 2025 Commission report on Albania",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0141_EN.html",
+    "date": "2026-05-11",
+    "type": "Report",
+    "speaker": "Andreas Schieder",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Western Balkans"
+    ],
+    "summary": "REPORT - on the 2025 Commission report on Albania - (2025/2250(INI)) - Committee on Foreign Affairs - Rapporteur: Andreas Schieder"
+  },
+  {
+    "id": "A-10-2026-0140",
+    "title": "REPORT on the 2025 Commission report on Georgia",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0140_EN.html",
+    "date": "2026-05-11",
+    "type": "Report",
+    "speaker": "European Parliament (AFET)",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Eastern Europe & Caucasus"
+    ],
+    "summary": "REPORT - on the 2025 Commission report on Georgia - (2025/2257(INI)) -  - Rasa Juknevičienė"
   },
   {
     "id": "A-10-2026-0035",
