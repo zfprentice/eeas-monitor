@@ -1,48 +1,39 @@
 import requests
-from bs4 import BeautifulSoup
 
-headers_ua = {
-    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-}
-
-print("=== PressCorner: compare pageNumber=0 vs pageNumber=1 ===")
-base_url = "https://ec.europa.eu/commission/presscorner/api/search"
-ids_by_page = {}
-for page in [0, 1, 2]:
-    params = {"text": "", "docType": "STATEMENT", "pagesize": 50, "pageNumber": page, "language": "en"}
-    r = requests.get(base_url, params=params, headers={"User-Agent": "EEAS-Monitor-Pipeline/1.0", "Accept": "application/json"}, timeout=15)
-    data = r.json()
-    docs = data.get("docuLanguageListResources", [])
-    ids = [d.get("refCode") for d in docs]
-    ids_by_page[page] = ids
-    print(f"page {page}: {len(ids)} items, first 3: {ids[:3]}, last 3: {ids[-3:] if len(ids)>=3 else ids}")
-
-print("page0 == page1 ?", ids_by_page[0] == ids_by_page[1])
-print("page1 == page2 ?", ids_by_page[1] == ids_by_page[2])
-print("overlap page0/page1:", len(set(ids_by_page[0]) & set(ids_by_page[1])))
-
-print()
-print("=== PressCorner: try 'page' param name instead of 'pageNumber' ===")
+print("=== PressCorner: try POST with JSON body for pagination ===")
+url = "https://ec.europa.eu/commission/presscorner/api/search"
+headers = {"User-Agent": "EEAS-Monitor-Pipeline/1.0", "Accept": "application/json", "Content-Type": "application/json"}
 for page in [0, 1]:
-    params = {"text": "", "docType": "STATEMENT", "pagesize": 50, "page": page, "language": "en"}
-    r = requests.get(base_url, params=params, headers={"User-Agent": "EEAS-Monitor-Pipeline/1.0", "Accept": "application/json"}, timeout=15)
-    data = r.json()
-    docs = data.get("docuLanguageListResources", [])
-    ids = [d.get("refCode") for d in docs]
-    print(f"'page' param, page={page}: first 3: {ids[:3]}")
+    body = {"text": "", "docType": "STATEMENT", "pagesize": 50, "pageNumber": page, "language": "en"}
+    try:
+        r = requests.post(url, json=body, headers=headers, timeout=15)
+        print(f"POST page={page}: status={r.status_code}")
+        if r.status_code == 200:
+            data = r.json()
+            docs = data.get("docuLanguageListResources", [])
+            print("  first 3:", [d.get("refCode") for d in docs[:3]])
+    except Exception as e:
+        print("error:", e)
 
 print()
-print("=== EEAS: compare page=0 vs page=1 card titles ===")
-base_eeas = "https://www.eeas.europa.eu"
-titles_by_page = {}
-for page in [0, 1, 2]:
-    url = f"{base_eeas}/eeas/mat%C3%A9riel-de-presse_fr?page={page}"
-    r = requests.get(url, headers=headers_ua, timeout=15)
-    soup = BeautifulSoup(r.text, "html.parser")
-    cards = [c for c in soup.select(".card") if c.select_one(".card-title a")]
-    titles = [c.select_one(".card-title a").get_text(strip=True)[:50] for c in cards]
-    titles_by_page[page] = titles
-    print(f"page {page}: {len(titles)} cards, first 2: {titles[:2]}")
+print("=== EEAS: try Drupal AJAX views endpoint for real pagination ===")
+# Drupal views often expose /views/ajax for AJAX-paged views
+url2 = "https://www.eeas.europa.eu/views/ajax"
+try:
+    r2 = requests.get(url2, params={
+        "view_name": "pressmaterial_filterpage",
+        "view_display_id": "pm_search_page",
+        "page": 1,
+    }, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+    print("views/ajax GET ->", r2.status_code, r2.text[:300])
+except Exception as e:
+    print("error:", e)
 
-print("eeas page0 == page1 ?", titles_by_page[0] == titles_by_page[1])
-print("eeas overlap page0/page1:", len(set(titles_by_page[0]) & set(titles_by_page[1])))
+print()
+print("=== EEAS: try &page=1 vs ?page=1 as only param (no leading page=0 in URL construction) ===")
+for p in ["page=1", "page=2"]:
+    url3 = f"https://www.eeas.europa.eu/eeas/mat%C3%A9riel-de-presse_fr?{p}"
+    r3 = requests.get(url3, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+    # crude check: does it contain a distinctive later-page title vs page 0's known first title?
+    known_first_title = "L’UE et l’Algérie lancent un jumelage"
+    print(p, "-> status", r3.status_code, "contains page0 first title:", known_first_title in r3.text)
