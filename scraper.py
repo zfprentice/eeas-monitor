@@ -3,6 +3,7 @@ import hashlib
 import json
 import os
 import re
+import sys
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 import requests
@@ -64,15 +65,25 @@ def detect_regions(text):
     return matched if matched else ["Global / Multilateral"]
 
 
+def parse_eeas_date(raw):
+    """EEAS portal dates are rendered as DD.MM.YYYY."""
+    raw = raw.strip()
+    try:
+        return datetime.datetime.strptime(raw, "%d.%m.%Y").strftime("%Y-%m-%d")
+    except ValueError:
+        return datetime.datetime.utcnow().strftime("%Y-%m-%d")
+
+
 def fetch_presscorner(pages=5):
     """Pulls recent and historical statements from the EC Press Corner API."""
     items = []
-    base_url = "https://ec.europa.eu/commission/presscorner/api/documents"
-    headers = {"User-Agent": "EEAS-Monitor-Pipeline/1.0"}
+    base_url = "https://ec.europa.eu/commission/presscorner/api/search"
+    headers = {"User-Agent": "EEAS-Monitor-Pipeline/1.0", "Accept": "application/json"}
 
     for page in range(pages):
         params = {
-            "docType": "STATEMENT,SPEECH",
+            "text": "",
+            "docType": "STATEMENT",
             "pagesize": 50,
             "pageNumber": page,
             "language": "en",
@@ -80,41 +91,41 @@ def fetch_presscorner(pages=5):
         try:
             r = requests.get(base_url, params=params, headers=headers, timeout=15)
             if r.status_code != 200:
+                print(f"[presscorner] page {page}: HTTP {r.status_code}, stopping")
                 break
             data = r.json()
-            docs = data.get("documents", []) if isinstance(data, dict) else data
+            docs = data.get("docuLanguageListResources", [])
             if not docs:
                 break
 
             for doc in docs:
-                ref = doc.get("reference") or doc.get("id", "")
-                title = doc.get("title", "").strip()
-                author = (
-                    doc.get("author")
-                    or doc.get("speaker")
-                    or "High Representative / VP"
-                )
-                corpus = f"{title} {doc.get('description', '')}"
+                ref_code = doc.get("refCode", "")
+                title = (doc.get("title") or "").strip()
+                if not title:
+                    continue
+                doc_type = (doc.get("docutype") or {}).get("description", "Statement")
+                corpus = f"{title} {doc.get('leadText') or ''}"
+                slug = ref_code.lower().replace("/", "_") if ref_code else ""
 
                 items.append(
                     {
-                        "id": ref,
+                        "id": ref_code or f"presscorner-{doc.get('ky')}",
                         "title": title,
-                        "link": f"https://ec.europa.eu/commission/presscorner/detail/en/{ref}",
-                        "date": doc.get(
-                            "publicationDate",
-                            datetime.datetime.utcnow().strftime("%Y-%m-%d"),
-                        )[:10],
-                        "type": doc.get("documentType", "STATEMENT"),
-                        "speaker": author,
+                        "link": f"https://ec.europa.eu/commission/presscorner/detail/en/{slug}"
+                        if slug
+                        else "https://ec.europa.eu/commission/presscorner/home/en",
+                        "date": (doc.get("eventDate") or datetime.datetime.utcnow().strftime("%Y-%m-%d"))[:10],
+                        "type": doc_type,
+                        "speaker": "European Commission",
                         "source": "Commission PressCorner (HQ)",
                         "regions": detect_regions(corpus),
-                        "summary": doc.get("description", "").strip()[:240],
+                        "summary": (doc.get("leadText") or "").strip()[:240],
                     }
                 )
         except Exception as e:
             print(f"Error querying PressCorner page {page}: {e}")
             break
+    print(f"[presscorner] collected {len(items)} items")
     return items
 
 
@@ -127,18 +138,19 @@ def fetch_eeas_portal(pages=3):
     }
 
     for page in range(pages):
-        url = f"{base_url}/eeas/mat%C3%A9riel-de-presse_fr?f[0]=pm_type:Statement&page={page}"
+        url = f"{base_url}/eeas/mat%C3%A9riel-de-presse_fr?page={page}"
         try:
             r = requests.get(url, headers=headers, timeout=15)
             if r.status_code != 200:
+                print(f"[eeas] page {page}: HTTP {r.status_code}, stopping")
                 break
             soup = BeautifulSoup(r.text, "html.parser")
-            cards = soup.select("article, .ecl-card, .views-row")
+            cards = [c for c in soup.select(".card") if c.select_one(".card-title a")]
             if not cards:
                 break
 
             for c in cards:
-                a_tag = c.select_one("h2 a, h3 a, .ecl-card__title a")
+                a_tag = c.select_one(".card-title a")
                 if not a_tag or not a_tag.get("href"):
                     continue
 
@@ -146,12 +158,11 @@ def fetch_eeas_portal(pages=3):
                 link = urljoin(base_url, a_tag["href"])
                 doc_id = hashlib.md5(link.encode("utf-8")).hexdigest()[:12]
 
-                date_tag = c.select_one("time, .ecl-card__detail")
-                date_str = (
-                    date_tag.get_text(strip=True)
-                    if date_tag
-                    else datetime.datetime.utcnow().strftime("%Y-%m-%d")
-                )
+                category_tag = c.select_one(".card-subtitle")
+                category = category_tag.get_text(strip=True) if category_tag else "Press Material"
+
+                footer_tag = c.select_one(".card-footer")
+                date_str = parse_eeas_date(footer_tag.get_text(strip=True)) if footer_tag else datetime.datetime.utcnow().strftime("%Y-%m-%d")
 
                 corpus = f"{title} {c.get_text()}"
                 items.append(
@@ -159,8 +170,8 @@ def fetch_eeas_portal(pages=3):
                         "id": doc_id,
                         "title": title,
                         "link": link,
-                        "date": date_str[:15],
-                        "type": "Statement / Communiqué",
+                        "date": date_str,
+                        "type": category,
                         "speaker": "EEAS / EU Delegation",
                         "source": "EEAS Direct Portal",
                         "regions": detect_regions(corpus),
@@ -170,6 +181,7 @@ def fetch_eeas_portal(pages=3):
         except Exception as e:
             print(f"Error querying EEAS Portal page {page}: {e}")
             break
+    print(f"[eeas] collected {len(items)} items")
     return items
 
 
@@ -184,12 +196,27 @@ def main():
             existing = []
 
     seen_ids = {x["id"] for x in existing if "id" in x}
-    new_items = fetch_presscorner(pages=5) + fetch_eeas_portal(pages=3)
+    presscorner_items = fetch_presscorner(pages=5)
+    eeas_items = fetch_eeas_portal(pages=3)
+    new_items = presscorner_items + eeas_items
 
+    if not new_items and not existing:
+        print("ERROR: both sources returned zero items and there is no existing data. "
+              "This likely means a source has changed its API/markup. Failing the run "
+              "instead of writing an empty dataset.")
+        sys.exit(1)
+
+    if not presscorner_items:
+        print("WARNING: PressCorner returned 0 items this run (source may be broken).")
+    if not eeas_items:
+        print("WARNING: EEAS portal returned 0 items this run (source may be broken).")
+
+    added = 0
     for item in new_items:
         if item["id"] not in seen_ids and item["title"]:
             existing.append(item)
             seen_ids.add(item["id"])
+            added += 1
 
     # Sort newest to oldest by date
     existing.sort(key=lambda x: str(x.get("date", "")), reverse=True)
@@ -197,7 +224,7 @@ def main():
 
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(existing, f, indent=2, ensure_ascii=False)
-    print(f"Successfully saved {len(existing)} statements to {DATA_PATH}.")
+    print(f"Successfully saved {len(existing)} statements to {DATA_PATH} ({added} new).")
 
 
 if __name__ == "__main__":
