@@ -64,44 +64,106 @@ def detect_regions(text):
     return matched if matched else ["Global / Multilateral"]
 
 
-def fetch_presscorner():
+def fetch_presscorner_history(pages=5):
+    """Pulls multiple pages of past statements from the Press Corner API."""
     items = []
-    url = "https://ec.europa.eu/commission/presscorner/api/documents"
-    params = {"docType": "STATEMENT,SPEECH", "pagesize": 40, "language": "en"}
+    base_url = "https://ec.europa.eu/commission/presscorner/api/documents"
     headers = {"User-Agent": "EEAS-Monitor-Pipeline/1.0"}
 
-    try:
-        r = requests.get(url, params=params, headers=headers, timeout=12)
-        if r.status_code == 200:
+    for page in range(pages):
+        params = {
+            "docType": "STATEMENT,SPEECH",
+            "pagesize": 100,
+            "pageNumber": page,
+            "language": "en",
+        }
+        try:
+            r = requests.get(
+                base_url, params=params, headers=headers, timeout=15
+            )
+            if r.status_code != 200:
+                break
             docs = r.json()
             if isinstance(docs, dict):
                 docs = docs.get("documents", [])
+            if not docs:
+                break
+
             for doc in docs:
                 ref = doc.get("reference") or doc.get("id", "")
                 title = doc.get("title", "").strip()
-                author = doc.get("author") or doc.get("speaker") or "High Representative / VP"
-
+                author = (
+                    doc.get("author")
+                    or doc.get("speaker")
+                    or "High Representative / VP"
+                )
                 corpus = f"{title} {doc.get('description', '')}"
-                regions = detect_regions(corpus)
 
                 items.append(
                     {
                         "id": ref,
                         "title": title,
                         "link": f"https://ec.europa.eu/commission/presscorner/detail/en/{ref}",
-                        "date": doc.get(
-                            "publicationDate",
-                            datetime.datetime.utcnow().strftime("%Y-%m-%d"),
-                        )[:10],
+                        "date": doc.get("publicationDate", "")[:10],
                         "type": doc.get("documentType", "STATEMENT"),
                         "speaker": author,
                         "source": "Commission PressCorner (HQ)",
-                        "regions": regions,
+                        "regions": detect_regions(corpus),
                         "summary": doc.get("description", "").strip()[:240],
                     }
                 )
-    except Exception as e:
-        print(f"Error querying PressCorner: {e}")
+        except Exception as e:
+            print(f"Error reading PressCorner page {page}: {e}")
+            break
+    return items
+
+
+def fetch_eeas_portal_history(pages=5):
+    """Paginates through past pages of the EEAS portal."""
+    items = []
+    base_url = "https://www.eeas.europa.eu"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+    }
+
+    for page in range(pages):
+        url = f"{base_url}/eeas/mat%C3%A9riel-de-presse_fr?f[0]=pm_type:Statement&page={page}"
+        try:
+            r = requests.get(url, headers=headers, timeout=15)
+            if r.status_code != 200:
+                break
+            soup = BeautifulSoup(r.text, "html.parser")
+            cards = soup.select("article, .ecl-card, .views-row")
+            if not cards:
+                break
+
+            for c in cards:
+                a_tag = c.select_one("h2 a, h3 a, .ecl-card__title a")
+                if not a_tag or not a_tag.get("href"):
+                    continue
+
+                title = a_tag.get_text(strip=True)
+                link = urljoin(base_url, a_tag["href"])
+                doc_id = hashlib.md5(link.encode("utf-8")).hexdigest()[:12]
+                date_tag = c.select_one("time, .ecl-card__detail")
+                date_str = date_tag.get_text(strip=True) if date_tag else ""
+
+                items.append(
+                    {
+                        "id": doc_id,
+                        "title": title,
+                        "link": link,
+                        "date": date_str[:15],
+                        "type": "Statement / Communiqué",
+                        "speaker": "EEAS / EU Delegation",
+                        "source": "EEAS Direct Portal",
+                        "regions": detect_regions(f"{title} {c.get_text()}"),
+                        "summary": title,
+                    }
+                )
+        except Exception as e:
+            print(f"Error scraping EEAS page {page}: {e}")
+            break
     return items
 
 
@@ -173,7 +235,7 @@ def main():
             seen_ids.add(item["id"])
 
     existing.sort(key=lambda x: str(x.get("date", "")), reverse=True)
-    existing = existing[:250]
+    existing = existing[:2000]
 
     with open(DATA_PATH, "w", encoding="utf-8") as f:
         json.dump(existing, f, indent=2, ensure_ascii=False)
