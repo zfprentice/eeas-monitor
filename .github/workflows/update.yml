@@ -2,7 +2,7 @@ name: Update EEAS Statements
 
 on:
   schedule:
-    - cron: '*/30 * * * *'  # Runs automatically every 30 minutes
+    - cron: '0 * * * *'  # Runs automatically once an hour
   workflow_dispatch:        # Lets you click a button to run it immediately
 
 permissions:
@@ -22,9 +22,6 @@ jobs:
 
       - name: Install dependencies
         run: pip install requests beautifulsoup4
-
-      - name: Debug probe
-        run: python debug_probe.py
 
       - name: Fetch statements
         run: python scraper.py
