@@ -1,5 +1,57 @@
 [
   {
+    "id": "MEX/26/1982",
+    "title": "Daily News 25 / 09 / 2026",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1982",
+    "date": "2026-09-25",
+    "type": "Daily news",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/1981",
+    "title": "Commission greenlights Luxembourg's third payment request for €92.2 million under NextGenerationEU",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1981",
+    "date": "2026-09-25",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the European Commission positively assessed Luxembourg's third payment request for €92.2 million under the Recovery and Resilience Facility, the centrepiece of NextGenerationEU."
+  },
+  {
+    "id": "INF/26/1834",
+    "title": "Commission takes action to ensure complete and timely transposition of EU directives",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/inf_26_1834",
+    "date": "2026-09-25",
+    "type": "Infringement decisions",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "e90c7cdb466d",
+    "title": "COMMUNIQUE CONJOINT",
+    "link": "https://www.eeas.europa.eu/delegations/madagascar/communique-conjoint_und_fr",
+    "date": "2026-09-25",
+    "type": "Communiqué de presse",
+    "speaker": "EEAS / EU Delegation",
+    "source": "EEAS Direct Portal",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "COMMUNIQUE CONJOINT"
+  },
+  {
     "id": "SPEECH/26/1968",
     "title": "Opening remarks by Commissioner Hansen at the “EU AgRI 2040” Agricultural Research and Innovation Conference",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1968",
@@ -102,6 +154,71 @@
       "Global / Multilateral"
     ],
     "summary": "EU Ambassador Geneviève Tuts in conversation with The Toronto Star"
+  },
+  {
+    "id": "SPEECH/26/1976",
+    "title": "Commissioner Šuica addresses the 2nd Ministerial Meeting of the Coalition of Rome for Fertiliser Access and Food Security",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1976",
+    "date": "2026-09-24",
+    "type": "Speech",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/1977",
+    "title": "Commissioner Šuica addresses the Ministerial roundtable on Health and Humanitarian access in Gaza",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1977",
+    "date": "2026-09-24",
+    "type": "Speech",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Middle East & North Africa"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/1980",
+    "title": "Commissioner Šuica addresses the Ministerial Meeting on Palestine with all Ad Hoc Liaison Committee (AHLC) members",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1980",
+    "date": "2026-09-24",
+    "type": "Speech",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Middle East & North Africa"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/1979",
+    "title": "Intervention by Commissioner Šuica at the UNRWA Ministerial-level Meeting",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1979",
+    "date": "2026-09-24",
+    "type": "Speech",
+    "speaker": "Commissioner Šuica",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/1978",
+    "title": "Commissioner Šuica addresses the Global Alliance for the Implementation of the Two-State Solution",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1978",
+    "date": "2026-09-24",
+    "type": "Speech",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
   },
   {
     "id": "STATEMENT/26/1961",
@@ -856,6 +973,45 @@
       "Global / Multilateral"
     ],
     "summary": ""
+  },
+  {
+    "id": "A-10-2026-0237",
+    "title": "REPORT on a European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0237_EN.html",
+    "date": "2026-09-16",
+    "type": "Report",
+    "speaker": "Hilde Vautmans",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Indo-Pacific & Asia"
+    ],
+    "summary": "REPORT - on a European Parliament recommendation to the Council, the Commission and the Vice-President of the Commission / High Representative of the Union for Foreign Affairs and Security Policy concerning EU-China political relations - (2"
+  },
+  {
+    "id": "A-10-2026-0236",
+    "title": "RECOMMENDATION on the draft Council decision on the conclusion of a broad package of agreements between the European Union, of the one part, and the Swiss Confederation, of the other part, to consolidate, deepen and expand the bilateral relations, and amending Decisions 2011/51/EU and 2011/738/EU",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0236_EN.html",
+    "date": "2026-09-16",
+    "type": "Report",
+    "speaker": "Christophe Grudler",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "RECOMMENDATION - on the draft Council decision on the conclusion of a broad package of agreements between the European Union, of the one part, and the Swiss Confederation, of the other part, to consolidate, deepen and expand the bilateral r"
+  },
+  {
+    "id": "A-10-2026-0235",
+    "title": "INTERIM REPORT on the proposal for a Council decision on the conclusion of a broad package of agreements to consolidate, deepen and expand the bilateral relations with the Swiss Confederation",
+    "link": "https://www.europarl.europa.eu/doceo/document/A-10-2026-0235_EN.html",
+    "date": "2026-09-15",
+    "type": "Report",
+    "speaker": "Christophe Grudler",
+    "source": "European Parliament (AFET/DEVE)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "INTERIM REPORT - on the proposal for a Council decision on the conclusion of a broad package of agreements to consolidate, deepen and expand the bilateral relations with the Swiss Confederation - (COM(2025)0309 - C10-0000/2026 - 2025/0162R("
   },
   {
     "id": "7cbdb3c50bc4",
