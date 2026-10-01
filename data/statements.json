@@ -1,5 +1,18 @@
 [
   {
+    "id": "SPEECH/26/2035",
+    "title": "Speech by Commissioner Lahbib at the North Atlantic Council",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2035",
+    "date": "2026-10-01",
+    "type": "Speech",
+    "speaker": "Commissioner Lahbib",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
     "id": "AC/26/2026",
     "title": "President von der Leyen attends UN General Assembly underscoring the EU's commitment to multilateralism",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2026",
@@ -167,6 +180,19 @@
       "Global / Multilateral"
     ],
     "summary": "30e Festival du Cinéma Européen au Liban"
+  },
+  {
+    "id": "SPEECH/26/2032",
+    "title": "Speech by Commissioner Albuquerque at the European Network for Women in Leadership (WIL Europe) high-level event on Financial Education",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2032",
+    "date": "2026-09-30",
+    "type": "Speech",
+    "speaker": "Commissioner Albuquerque",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
   },
   {
     "id": "2dec4d0fac20",
