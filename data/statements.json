@@ -1,5 +1,57 @@
 [
   {
+    "id": "STATEMENT/26/2053",
+    "title": "Statement by President von der Leyen with Prime Minister of North Macedonia Mickoski",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2053",
+    "date": "2026-10-02",
+    "type": "Statement",
+    "speaker": "President von der Leyen with Prime Minister",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Western Balkans"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "MEX/26/2050",
+    "title": "Daily News 02 / 10 / 2026",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2050",
+    "date": "2026-10-02",
+    "type": "Daily news",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2019",
+    "title": "Commission approves €170 million Bulgarian State aid for farmers facing increased fuel and fertiliser prices",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2019",
+    "date": "2026-10-02",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "The European Commission has approved a €170 million Bulgarian State aid scheme for farmers facing increased fuel and fertiliser prices due to the Middle East crisis."
+  },
+  {
+    "id": "IP/26/2047",
+    "title": "Commission disburses €2.9 billion under Ukraine Facility to support financial stability and reforms",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2047",
+    "date": "2026-10-02",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Eastern Europe & Caucasus"
+    ],
+    "summary": "Today, the European Commission has released €2.9 billion to Ukraine to support financing needs and maintain the functioning of the country's public administration, as it continues to defend itself against Russia's war of aggression. This am"
+  },
+  {
     "id": "SPEECH/26/2035",
     "title": "Speech by Commissioner Lahbib at the North Atlantic Council",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2035",
@@ -726,6 +778,19 @@
       "Global / Multilateral"
     ],
     "summary": ""
+  },
+  {
+    "id": "1e782fac98ba",
+    "title": "À Ouarzazate, Panafgeo+ allie conservation du patrimoine géologique et communication en géosciences",
+    "link": "https://panafgeo.eurogeosurveys.org/wp-content/uploads/2026/09/Communique-de-presse_PanAfGeo-Maroc.pdf",
+    "date": "2026-09-29",
+    "type": "Communiqué de presse",
+    "speaker": "EEAS / EU Delegation",
+    "source": "EEAS Direct Portal",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "À Ouarzazate, Panafgeo+ allie conservation du patrimoine géologique et communication en géosciences"
   },
   {
     "id": "SPEECH/26/1997",
