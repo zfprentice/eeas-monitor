@@ -26,6 +26,123 @@
     "summary": ""
   },
   {
+    "id": "SPEECH/26/2089",
+    "title": "Video message by President von der Leyen to mark 25th Anniversary of IFOAM Organics Europe",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2089",
+    "date": "2026-10-06",
+    "type": "Speech",
+    "speaker": "President von der Leyen",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "MEX/26/2088",
+    "title": "Daily News 06 / 10 / 2026",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2088",
+    "date": "2026-10-06",
+    "type": "Daily news",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2085",
+    "title": "Remarks by Commissioner Hoekstra at the Leaders' Plenary at the pre-COP31 meeting",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2085",
+    "date": "2026-10-06",
+    "type": "Speech",
+    "speaker": "Commissioner Hoekstra",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2064",
+    "title": "Commission registers European Citizens' Initiative for sovereign European AI domains",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2064",
+    "date": "2026-10-06",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the European Commission registered the European Citizens' Initiative (ECI) entitled ‘Creation of a European Digital Space (.IA) for Sovereign AI Governance'."
+  },
+  {
+    "id": "QANDA/26/2071",
+    "title": "Questions and answers on the new Standardisation Regulation",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2071",
+    "date": "2026-10-06",
+    "type": "Questions and answers",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "FS/26/2072",
+    "title": "Factsheet - Standardisation Regulation Proposal",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/fs_26_2072",
+    "date": "2026-10-06",
+    "type": "Factsheet",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "QANDA/26/2076",
+    "title": "Questions and answers on the pre-enlargement policy reviews",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2076",
+    "date": "2026-10-06",
+    "type": "Questions and answers",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2070",
+    "title": "Commission adopts proposal to accelerate standards development and improve EU competitiveness",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2070",
+    "date": "2026-10-06",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "The European Commission has today proposed to modernise the European standardisation system to make it faster, increase the representation of small- and medium-sized enterprises, and to be better equipped to support the European Union's str"
+  },
+  {
+    "id": "IP/26/2075",
+    "title": "Preparing for a wider Union",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2075",
+    "date": "2026-10-06",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "The European Commission has adopted a package on pre-enlargement policy reviews, setting out the policy orientations and actions needed to prepare the Union for future enlargements. As announced by President von der Leyen in her 2023 State "
+  },
+  {
     "id": "SPEECH/26/2067",
     "title": "Speech by Commissioner Lahbib at the 30th anniversary of the European Association of Service Providers for People with Disabilities",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2067",
@@ -115,6 +232,19 @@
       "Global / Multilateral"
     ],
     "summary": "The European Commission has concluded that Poland's plan to support the extension of capacity of a factory of truck producer MAN Trucks Sp. z o. o. in Niepołomice in the Małopolskie region is not in line with EU State aid rules. Therefore, "
+  },
+  {
+    "id": "SPEECH/26/2087",
+    "title": "Speech by Commissioner Várhelyi at EP Plenary Session: Protecting patients from illegal and falsified medicines sold online",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2087",
+    "date": "2026-10-05",
+    "type": "Speech",
+    "speaker": "Commissioner Várhelyi",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
   },
   {
     "id": "STATEMENT/26/2053",
@@ -544,6 +674,19 @@
       "Global / Multilateral"
     ],
     "summary": "Les technologies propres européennes dans l’Ouest canadien : Vitrine UE-Canada de l’innovation en technologies propres à Vancouver"
+  },
+  {
+    "id": "SPEECH/26/2081",
+    "title": "Press Remarks by Commissioner Várhelyi following the EPSCO Health Council",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2081",
+    "date": "2026-10-01",
+    "type": "Speech",
+    "speaker": "Commissioner Várhelyi following the EPSCO Health Council",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
   },
   {
     "id": "AC/26/2026",
