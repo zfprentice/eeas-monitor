@@ -1,5 +1,96 @@
 [
   {
+    "id": "SPEECH/26/2117",
+    "title": "Speech by Commissioner Lahbib at the Irish EU Affairs Committee",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2117",
+    "date": "2026-10-08",
+    "type": "Speech",
+    "speaker": "Commissioner Lahbib",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "MEX/26/2112",
+    "title": "Daily News 08 / 10 / 2026",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2112",
+    "date": "2026-10-08",
+    "type": "Daily news",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2107",
+    "title": "Speech by Commissioner Kos at the International Conference on Corridor VIII in Sofia",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2107",
+    "date": "2026-10-08",
+    "type": "Speech",
+    "speaker": "Commissioner Kos",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2091",
+    "title": "Eurobarometer shows consumers' growing trust in EU Ecolabel",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2091",
+    "date": "2026-10-08",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Released on the occasion of the World Ecolabel Day, the latest Eurobarometer survey shows an increased trust and recognition for the EU Ecolabel among European consumers who are increasingly looking for sustainable products."
+  },
+  {
+    "id": "IP/26/2084",
+    "title": "Commission fines Kingspan €40 million for providing incorrect and misleading information during merger investigation",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2084",
+    "date": "2026-10-08",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "The European Commission has fined Kingspan €40 million for providing incorrect and misleading information during the 2021 Commission review of Kingspan's planned acquisition of Trimo, under the EU Merger Regulation (‘EUMR')."
+  },
+  {
+    "id": "SPEECH/26/2104",
+    "title": "Speech by Commissioner Síkela Keynote remarks on EU in the arctic",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2104",
+    "date": "2026-10-08",
+    "type": "Speech",
+    "speaker": "Commissioner Síkela Keynote remarks",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2065",
+    "title": "The EU budget continues delivering for Europe in 2025",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2065",
+    "date": "2026-10-08",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the Court of Auditors (ECA) published its Annual Report, giving the EU's annual accounts a clean bill of health for the 19th consecutive year. The ECA confirmed that the collection of EU revenues was free from material error."
+  },
+  {
     "id": "SPEECH/26/2101",
     "title": "Remarks by Commissioner Hoekstra at the Pre-COP31 High-Level Session on Pacific Energy Transition: From Ambition to Implementation",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2101",
@@ -94,6 +185,19 @@
     "id": "SPEECH/26/2080",
     "title": "Discours liminaire du Commissaire Hansen devant les Commissions des Affaires Européennes et des Affaires Économiques de l'Assemblée Nationale",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2080",
+    "date": "2026-10-07",
+    "type": "Speech",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2111",
+    "title": "Commissioner Šuica participates in the Opening Ceremony of the 26th Annual General Assembly of the International Association of Maritime Universities",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2111",
     "date": "2026-10-07",
     "type": "Speech",
     "speaker": "European Commission",
@@ -505,6 +609,19 @@
       "Global / Multilateral"
     ],
     "summary": "La Unión Europea participa por segundo año consecutivo en la Bienal Internacional de Arquitectura de Buenos Aires"
+  },
+  {
+    "id": "SPEECH/26/2110",
+    "title": "Commissioner Šuica participates in the One Water Euro-Mediterranean Water Forum",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2110",
+    "date": "2026-10-02",
+    "type": "Speech",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
   },
   {
     "id": "SPEECH/26/2035",
