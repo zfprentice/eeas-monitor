@@ -1,5 +1,70 @@
 [
   {
+    "id": "SPEECH/26/2151",
+    "title": "Speech by Commissioner Hoekstra at the Annual meeting of the Heads of the Contact Committee of the Supreme Audit Institutions of the European Union",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2151",
+    "date": "2026-10-13",
+    "type": "Speech",
+    "speaker": "Commissioner Hoekstra",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "MEX/26/2149",
+    "title": "Daily News 13 / 10 / 2026",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2149",
+    "date": "2026-10-13",
+    "type": "Daily news",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2147",
+    "title": "Job quality is a priority in the EU, according to annual Commission report",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2147",
+    "date": "2026-10-13",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "The quality of jobs in the EU has improved over the past decade, according to the 2026 European Employment and Social Outlook, published today."
+  },
+  {
+    "id": "SPEECH/26/2130",
+    "title": "Keynote speech by Commissioner Síkela at the High-level EU-Malaysia Business Forum",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2130",
+    "date": "2026-10-13",
+    "type": "Speech",
+    "speaker": "Commissioner Síkela",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "82695b90910d",
+    "title": "INNOV'ACTION GLOBAL GATEWAY, l'Union européenne mise sur le talent de la jeunesse congolaise",
+    "link": "https://www.eeas.europa.eu/delegations/congo-brazzaville/innovaction-global-gateway-lunion-europeenne-mise-sur-le-talent-de-la-jeunesse-congolaise_fr",
+    "date": "2026-10-13",
+    "type": "Communiqué de presse",
+    "speaker": "EEAS / EU Delegation",
+    "source": "EEAS Direct Portal",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "INNOV'ACTION GLOBAL GATEWAY, l'Union européenne mise sur le talent de la jeunesse congolaise"
+  },
+  {
     "id": "SPEECH/26/2144",
     "title": "Speech by Executive Vice-President Teresa Ribera at an event organised by BusinessEurope on Important Projects of Common European Interest",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2144",
@@ -305,6 +370,19 @@
     "date": "2026-10-09",
     "type": "Statement",
     "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2148",
+    "title": "Opening words by Executive Vice-President Virkkunen at the Meeting with the European AI Scientific Panel of Independent Experts",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2148",
+    "date": "2026-10-09",
+    "type": "Speech",
+    "speaker": "Executive Vice-President Virkkunen",
     "source": "Commission PressCorner (HQ)",
     "regions": [
       "Global / Multilateral"
