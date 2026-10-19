@@ -13,6 +13,136 @@
     "summary": "La 30e édition du Festival du Cinéma Européen au Liban s’achève avec la Compétition de courts métrages et la Cérémonie de Remise des Prix"
   },
   {
+    "id": "SPEECH/26/2198",
+    "title": "Commissioner Roswall's address at an event to mark the outcomes of the Structured Dialogue on Water in Belgium",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2198",
+    "date": "2026-10-19",
+    "type": "Speech",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "AC/26/2197",
+    "title": "EU Leaders discuss energy prices, budget, Ukraine during two-day summit in Brussels",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2197",
+    "date": "2026-10-19",
+    "type": "News",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Eastern Europe & Caucasus"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "MEX/26/2195",
+    "title": "Daily News 19 / 10 / 2026",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2195",
+    "date": "2026-10-19",
+    "type": "Daily news",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2182",
+    "title": "Andorra and San Marino sign Association Agreement to move closer to the EU",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2182",
+    "date": "2026-10-19",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the Commission signed an Association Agreement with Andorra and San Marino, bringing both countries closer to the EU and establishing a clear and comprehensive framework for deeper economic and institutional integration."
+  },
+  {
+    "id": "IP/26/2187",
+    "title": "Commission invests €3.4 billion in net-zero technology projects",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2187",
+    "date": "2026-10-19",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the European Commission has selected 77 European net-zero technology projects to receive funding support worth €3.4 billion under the second call of the Innovation Fund, launched in December 2025."
+  },
+  {
+    "id": "IP/26/2184",
+    "title": "EU invests over €390 million in 135 new climate and environment projects",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2184",
+    "date": "2026-10-19",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "The European Commission has today granted more than €390 million to 135 new projects across Europe under the LIFE programme for environment and climate action."
+  },
+  {
+    "id": "SPEECH/26/2183",
+    "title": "Press remarks by Commissioners Maroš Šefčovič and Valdis Dombrovskis at the signature ceremony on the association and monetary agreements with the EU and Andorra and San Marino",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2183",
+    "date": "2026-10-19",
+    "type": "Speech",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2178",
+    "title": "Commission sends Statement of Objections to KKR for providing incorrect or misleading information during merger investigation",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2178",
+    "date": "2026-10-19",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "The European Commission has informed KKR & Co. Inc. ('KKR') of its preliminary view that the company provided incorrect and/or misleading information during the 2024 Commission's investigation of KKR's acquisition of NetCo, under the EU Mer"
+  },
+  {
+    "id": "QANDA/26/2185",
+    "title": "New LIFE Project Summaries",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2185",
+    "date": "2026-10-19",
+    "type": "Questions and answers",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "06bba3800ffd",
+    "title": "Programme TRANSFORM : l’Union européenne et Djibouti dressent le bilan d’un investissement réussi dans les compétences de la filière transport, logistique et portuaire",
+    "link": "https://www.eeas.europa.eu/delegations/djibouti/programme-transform-lunion-europeenne-et-djibouti-dressent-le-bilan-dun-investissement-reussi-dans_fr",
+    "date": "2026-10-19",
+    "type": "Communiqué de presse",
+    "speaker": "EEAS / EU Delegation",
+    "source": "EEAS Direct Portal",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Programme TRANSFORM : l’Union européenne et Djibouti dressent le bilan d’un investissement réussi dans les compétences de la filière transport, logistique et portuaire"
+  },
+  {
     "id": "STATEMENT/26/2194",
     "title": "Commission statement on the protests in Albania",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2194",
@@ -285,6 +415,19 @@
       "Global / Multilateral"
     ],
     "summary": "Business Forum UE–Mauritanie : une session d’information en ligne le 27 octobre 2026."
+  },
+  {
+    "id": "SPEECH/26/2202",
+    "title": "Speech by Commissioner Várhelyi at AMIIF (Mexican Association of Pharmaceutical Research Industries) Innovation Week",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2202",
+    "date": "2026-10-15",
+    "type": "Speech",
+    "speaker": "Commissioner Várhelyi",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
   },
   {
     "id": "IP/26/2154",
