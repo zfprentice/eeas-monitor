@@ -39,6 +39,97 @@
     "summary": "Today, the European Commission and the government of New Caledonia signed a Memorandum of Understanding (MoU) establishing a strategic partnership on sustainable raw materials value chains."
   },
   {
+    "id": "SPEECH/26/2212",
+    "title": "Remarks by High Representative Kallas and Commissioner Síkela on Europe's Northern Neighbourhood: A New Strategy for the Arctic",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2212",
+    "date": "2026-10-20",
+    "type": "Speech",
+    "speaker": "High Representative Kallas and Commissioner Síkela",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2210",
+    "title": "Commission welcomes political agreement on the future organic rulebook",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2210",
+    "date": "2026-10-20",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "The European Commission welcomes today's agreement between the European Parliament and the Council to amend certain production, labelling and certification rules, as well as rules on trade with non-EU countries, in the organic sector."
+  },
+  {
+    "id": "STATEMENT/26/2204",
+    "title": "Statement by President von der Leyen on Europe's Northern Neighbourhood: A New Strategy for the Arctic",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2204",
+    "date": "2026-10-20",
+    "type": "Statement",
+    "speaker": "President von der Leyen",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "FS/26/2201",
+    "title": "Factsheet on Vision 2040 for fisheries and aquaculture in the EU",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/fs_26_2201",
+    "date": "2026-10-20",
+    "type": "Factsheet",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2203",
+    "title": "EU sets out a new Strategy for the Arctic",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2203",
+    "date": "2026-10-20",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the European Commission and the High Representative of the Union for Foreign Affairs and Security Policy presented a new Strategy for the Arctic. The Strategy presents a new framework of political cooperation for like-minded partners"
+  },
+  {
+    "id": "QANDA/26/2199",
+    "title": "Questions and answers on the Vision 2040 for fisheries and aquaculture",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2199",
+    "date": "2026-10-20",
+    "type": "Questions and answers",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2200",
+    "title": "Commission presents its Vision 2040 for a thriving fisheries and aquaculture sector",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2200",
+    "date": "2026-10-20",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the European Commission presented its Vision for fisheries and aquaculture towards 2040, setting the direction for the next 15 years to strengthen the environmental and economic viability of the sector."
+  },
+  {
     "id": "b9ebd97a9631",
     "title": "La 30e édition du Festival du Cinéma Européen au Liban s’achève avec la Compétition de courts métrages et la Cérémonie de Remise des Prix",
     "link": "https://www.eeas.europa.eu/delegations/lebanon/la-30e-edition-du-festival-du-cinema-europeen-au-liban-sacheve-avec-la-competition-de-courts_fr",
@@ -188,6 +279,19 @@
     "date": "2026-10-19",
     "type": "Speech",
     "speaker": "Commissioner Dombrovskis",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2213",
+    "title": "Speech by Commissioner Albuquerque (by video message) for the Financial Wellbeing Institute Roundtable on the Savings and Investments Union",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2213",
+    "date": "2026-10-19",
+    "type": "Speech",
+    "speaker": "Commissioner Albuquerque (by video message)",
     "source": "Commission PressCorner (HQ)",
     "regions": [
       "Global / Multilateral"
@@ -654,6 +758,45 @@
     "id": "SPEECH/26/2180",
     "title": "Commissioner Roswall's address at the European Sustainable Industry Summit 2026",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2180",
+    "date": "2026-10-14",
+    "type": "Speech",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2217",
+    "title": "Video message by Commissioner Šuica celebrating the 20th Anniversary of Escola Europea",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2217",
+    "date": "2026-10-14",
+    "type": "Speech",
+    "speaker": "Commissioner Šuica celebrating the 20th Anniversary",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2211",
+    "title": "Speech by Commissioner McGrath on \"A Trusted Digital Economy\" at the International AI Summit",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2211",
+    "date": "2026-10-14",
+    "type": "Speech",
+    "speaker": "Commissioner McGrath",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2216",
+    "title": "Commissoner Šuica delivers the opening address at the EU Week of Regions and Cities Seminar \"From Policy to Territory: Making the Mediterranean Pact Work\"",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2216",
     "date": "2026-10-14",
     "type": "Speech",
     "speaker": "European Commission",
