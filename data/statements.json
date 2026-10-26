@@ -1,5 +1,44 @@
 [
   {
+    "id": "MEX/26/2257",
+    "title": "Daily News 26 / 10 / 2026",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2257",
+    "date": "2026-10-26",
+    "type": "Daily news",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2256",
+    "title": "Commission launches T-MED Investment Platform with up to €4.5 billion in EU guarantees",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2256",
+    "date": "2026-10-26",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the European Commission launched the T-MED Investment Platform, to mobilise large-scale investment in renewable energy and clean technologies across the Mediterranean. The platform is a key component of the Trans-Mediterranean Renewa"
+  },
+  {
+    "id": "IP/26/2231",
+    "title": "EU citizens think innovative foods can be useful but want more information, new Eurobarometer shows",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2231",
+    "date": "2026-10-26",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the European Commission published the results of a new Special Eurobarometer on food innovation, offering an EU-wide overview of how Europeans view innovative foods, ingredients and crops."
+  },
+  {
     "id": "IP/26/2250",
     "title": "Commission proposes stronger recognition of European heritage sites",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2250",
@@ -305,6 +344,19 @@
     "date": "2026-10-21",
     "type": "News",
     "speaker": "Commissioner Hansen \"Feeding Europe: the security we had forgotten\"",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2255",
+    "title": "Speech by Executive Vice-President Fitto at the 10th Regional Development and EU Funds Conference",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2255",
+    "date": "2026-10-21",
+    "type": "Speech",
+    "speaker": "Executive Vice-President Fitto",
     "source": "Commission PressCorner (HQ)",
     "regions": [
       "Global / Multilateral"
