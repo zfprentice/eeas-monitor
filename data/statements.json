@@ -1,5 +1,174 @@
 [
   {
+    "id": "SPEECH/26/2358",
+    "title": "Remarks by Commissioner Serafin during the Budget Committee meeting at the European Parliament",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2358",
+    "date": "2026-11-05",
+    "type": "Speech",
+    "speaker": "Commissioner Serafin",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2357",
+    "title": "Speech by Commissioner Dombrovskis presenting report on Simplification, Implementation and Enforcement at CEPS",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2357",
+    "date": "2026-11-05",
+    "type": "Speech",
+    "speaker": "Commissioner Dombrovskis presenting report",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "MEX/26/2355",
+    "title": "Daily News 05 / 11 / 2026",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2355",
+    "date": "2026-11-05",
+    "type": "Daily news",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "QANDA/26/2354",
+    "title": "Questions and Answers on the 2027 fishing opportunities in the Atlantic, Kattegat and Skagerrak",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2354",
+    "date": "2026-11-05",
+    "type": "Questions and answers",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2353",
+    "title": "Commission proposes 2027 fishing opportunities for fish stocks in the Atlantic, Kattegat and Skagerrak",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2353",
+    "date": "2026-11-05",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the European Commission adopted its proposal for the 2027 fishing opportunities for 11 fish stocks managed by the EU in the Atlantic, Kattegat and Skagerrak."
+  },
+  {
+    "id": "IP/26/2352",
+    "title": "European Innovation Council launches €1.8 billion in funding for 2027",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2352",
+    "date": "2026-11-05",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "The European Commission has adopted the 2027 European Innovation Council (EIC) Work Programme, unlocking €1.8 billion to support Europe's most promising deep tech entrepreneurs and researchers."
+  },
+  {
+    "id": "SPEECH/26/2351",
+    "title": "Remarks by Executive Vice-President Mînzatu on the Education and Skills package",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2351",
+    "date": "2026-11-05",
+    "type": "Speech",
+    "speaker": "Executive Vice-President Mînzatu",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2350",
+    "title": "Keynote address by Commissioner Kubilius at the Konrad Adenauer Stiftung's Global Security Forum",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2350",
+    "date": "2026-11-05",
+    "type": "Speech",
+    "speaker": "Commissioner Kubilius",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2349",
+    "title": "Commission disburses €4.36 billion to Ukraine under the €90 billion Ukraine Support Loan",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2349",
+    "date": "2026-11-05",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Eastern Europe & Caucasus"
+    ],
+    "summary": "Today, the European Commission disbursed €4.36 billion to Ukraine under the Ukraine Support Loan. This payment includes €3.7 billion for the second instalment of macro-financial assistance (MFA) agreed for 2026 and €658 million under the de"
+  },
+  {
+    "id": "QANDA/26/2339",
+    "title": "Questions and answers on the Education and Skills package",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2339",
+    "date": "2026-11-05",
+    "type": "Questions and answers",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "FS/26/2340",
+    "title": "Factsheet: Education and Skills package",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/fs_26_2340",
+    "date": "2026-11-05",
+    "type": "Factsheet",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2338",
+    "title": "Commission launches Education and Skills package to tackle declining basic skills, rapid digital change and teacher shortages",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2338",
+    "date": "2026-11-05",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Today, the European Commission presents a new Education and Skills Package to reverse the decline in basic skills, help schools make AI and digital technologies work for learning and address teacher shortages."
+  },
+  {
+    "id": "FS/26/2337",
+    "title": "Factsheet: Vocational skills for a competitive Europe",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/fs_26_2337",
+    "date": "2026-11-05",
+    "type": "Factsheet",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
     "id": "MEX/26/2341",
     "title": "Daily News 04 / 11 / 2026",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2341",
