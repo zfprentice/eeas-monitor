@@ -1,5 +1,109 @@
 [
   {
+    "id": "SPEECH/26/2383",
+    "title": "Speech by Commissioner Kos at the Plenary Session of the Parliament of the Republic of Moldova",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2383",
+    "date": "2026-11-09",
+    "type": "Speech",
+    "speaker": "Commissioner Kos",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Eastern Europe & Caucasus"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "STATEMENT/26/2381",
+    "title": "Statement by President von der Leyen with Romanian President Dan",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2381",
+    "date": "2026-11-09",
+    "type": "Statement",
+    "speaker": "President von der Leyen with Romanian President Dan",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "SPEECH/26/2380",
+    "title": "Speech by Commissioner Kos at the first High-Level Connectivity Platform Meeting on Digital",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2380",
+    "date": "2026-11-09",
+    "type": "Speech",
+    "speaker": "Commissioner Kos",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "Speech by Commissioner Kos at the first High-Level Connectivity Platform Meeting on Digital to advances digital connectivity along the Middle Corridor"
+  },
+  {
+    "id": "MEX/26/2378",
+    "title": "Daily News 09 / 11 / 2026",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2378",
+    "date": "2026-11-09",
+    "type": "Daily news",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "STATEMENT/26/2375",
+    "title": "Remarks by Commissioner Dombrovskis at Eurogroup press conference",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2375",
+    "date": "2026-11-09",
+    "type": "Statement",
+    "speaker": "Commissioner Dombrovskis",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "STATEMENT/26/2374",
+    "title": "Statement by President von der Leyen following her call with President Zelenskyy and ahead of her visit to the Black Sea Region, in Romania and Bulgaria",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2374",
+    "date": "2026-11-09",
+    "type": "Statement",
+    "speaker": "President von der Leyen following her call with President Zelenskyy and ahead",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
+  },
+  {
+    "id": "IP/26/2343",
+    "title": "EU emissions continue to fall as clean energy gains ground",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2343",
+    "date": "2026-11-09",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": "The European Commission has today published the 2026 EU Climate Action Progress Report and Carbon Market Report, showing that EU greenhouse gas (GHG) emissions continue to fall, clean technologies are expanding, and an increasing amount of "
+  },
+  {
+    "id": "IP/26/2371",
+    "title": "High-Level Platform meets in Moldova to strengthen digital connectivity between the EU, the Black Sea region, South-Caucasus and Central Asia*",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2371",
+    "date": "2026-11-09",
+    "type": "Press release",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Eastern Europe & Caucasus"
+    ],
+    "summary": "Today, the first High-Level Connectivity Platform Meeting on Digital takes place in Chișinău, Moldova, jointly hosted by the European Commission and the Moldovan Ministry of Economic Development and Digitalisation. The meeting sets the grou"
+  },
+  {
     "id": "SPEECH/26/2370",
     "title": "Speech by Commissioner Hoekstra at the 22nd Athens Tax Forum",
     "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2370",
@@ -596,6 +700,19 @@
       "Global / Multilateral"
     ],
     "summary": "Déclaration commune: L'Union européenne et le Canada bâtissent ensemble une Alliance pour l'avenir"
+  },
+  {
+    "id": "SPEECH/26/2379",
+    "title": "Commissioner Roswall's speech at the Nordic Compass Summit 2026",
+    "link": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2379",
+    "date": "2026-11-04",
+    "type": "Speech",
+    "speaker": "European Commission",
+    "source": "Commission PressCorner (HQ)",
+    "regions": [
+      "Global / Multilateral"
+    ],
+    "summary": ""
   },
   {
     "id": "SPEECH/26/2320",
